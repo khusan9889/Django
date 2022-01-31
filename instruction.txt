@@ -1,0 +1,13 @@
+1) prepare virtual environment
+python -m venv <name of your virtual environment>
+	1.1)After installing virtual environment we have to activate it:
+.\venv\Scripts\activate 
+	1.2)To quit virtual environment
+deactivate
+
+2)Open project in code redactor(check if the venv is workind, else  .\venv\Scripts\activate)
+	2.1)Install django into your venv
+pip install django
+	You may see django opportunities due to (django-admin) command
+	2.2)Create a project 
+django-admin startproject <name of your project>
