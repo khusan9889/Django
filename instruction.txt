@@ -22,3 +22,5 @@ python manage.py runserver
 
 4)Create an app:
 python manage.py startapp <name of your app>
+	4.1)add your app's name to settings->INSTALLED_APPS
+'<name of your app>.apps.<NameConfig>'
