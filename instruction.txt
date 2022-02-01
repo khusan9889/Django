@@ -11,3 +11,11 @@ pip install django
 	You may see django opportunities due to (django-admin) command
 	2.2)Create a project 
 django-admin startproject <name of your project>
+3)	RUN SERVER
+	To run server first go to directory of your django-project
+cd <directory to your project>
+	3.1)Now we may check the server with command:
+python manage.py runserver
+		3.1.1) If we want to run server with another port(not "http://127.0.0.1:8000/"), after:
+		python manage.py runserver <number of new port> (its not allowed to use any random numbers as it could not work)
+		
