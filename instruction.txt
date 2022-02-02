@@ -1,7 +1,7 @@
 1) prepare virtual environment
 python -m venv <name of your virtual environment>
 	1.1)After installing virtual environment we have to activate it:
-.\venv\Scripts\activate 
+.\venv\Scripts\activate
 	1.2)To quit virtual environment
 deactivate
 
@@ -24,3 +24,27 @@ python manage.py runserver
 python manage.py startapp <name of your app>
 	4.1)add your app's name to settings->INSTALLED_APPS
 '<name of your app>.apps.<NameConfig>'
+	4.2)views.py --> write functions
+from django.http import HttpResponse
+def <name of func>(request):
+	return HttpResponse("text")
+
+	Then in your project folder open URLS.py and add path wich you created in views.
+	*Don't forget to import neccessary file
+	##http://127.0.0.1:8000/<app's name>/
+
+	4.3)If we want to set the list of url directories from app
+from django.urls import path,include
+
+urlpatterns = [
+	path('<name of prefix>/' , include('<name of app>.urls')),
+
+]
+
+*Create a new URLS.PY file inside app.
+from django.urls import path
+from .views import *
+
+urlpatterns = [
+	path('', <func name which should be requested>) #http://127.0.00.1:8000/<app's name>/
+]
